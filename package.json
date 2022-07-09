@@ -1,12 +1,25 @@
 {
   "name": "sass-flex-gap",
   "version": "0.1.0",
-  "description": "",
-  "main": "index.js",
+  "description": "A Sass polyfill for flex-gap CSS property",
+  "keywords": [
+    "sass",
+    "flex",
+    "gap",
+    "flexbox",
+    "polyfill"
+  ],
+  "homepage": "https://github.com/vasartam/sass-flex-gap#readme",
+  "bugs": {
+    "url": "https://github.com/vasartam/sass-flex-gap/issues"
+  },
+  "license": "GPL-3.0-or-later",
+  "author": "Vasiliy Artamonov",
+  "repository": {
+    "type": "git",
+    "url": "git@github.com:vasartam/sass-flex-gap.git"
+  },
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
-  },
-  "keywords": [],
-  "author": "",
-  "license": "ISC"
+  }
 }
