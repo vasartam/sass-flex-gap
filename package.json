@@ -1,7 +1,7 @@
 {
   "name": "sass-flex-gap",
   "version": "0.1.0",
-  "description": "A Sass polyfill for flex-gap CSS property",
+  "description": "A Sass polyfill for flex-gap CSS property.",
   "keywords": [
     "sass",
     "flex",
