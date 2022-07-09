@@ -1,13 +1,13 @@
 # sass-flex-gap
 A Sass polyfill for flex-gap CSS property.
 
-# Installation
+## Installation
 
 ```bash
 npm install sass-flex-gap
 ```
 
-# Usage
+## Usage
 
 Sass:
 
