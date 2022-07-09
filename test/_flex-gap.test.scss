@@ -1,8 +1,8 @@
 @use "../node_modules/sass-true/sass/true";
 @use "../src/flex-gap" as *;
 
-@include true.describe('[mixin] flex-gap') {
-	@include true.it('Understands positive numbers') {
+@include true.describe("[mixin] flex-gap") {
+	@include true.it("Understands positive numbers") {
 		@include true.assert {
 			@include true.output {
 				@include flex-gap(10px);
@@ -19,7 +19,7 @@
 		}
 	}
 
-	@include true.it('Understands negative numbers') {
+	@include true.it("Understands negative numbers") {
 		@include true.assert {
 			@include true.output {
 				@include flex-gap(-10px);
@@ -36,7 +36,7 @@
 		}
 	}
 
-	@include true.it('Can accept multi-directional values') {
+	@include true.it("Can accept multi-directional values") {
 		@include true.assert {
 			@include true.output {
 				@include flex-gap(10px 20px);
