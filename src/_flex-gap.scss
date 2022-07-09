@@ -1,0 +1,66 @@
+@use "sass:math";
+@use "sass:list";
+
+@mixin flex-gap($gap) {
+	@if (list.length($gap) == 0) {
+		@error "`$gap` should be a list of 1 or 2 values. An empty value was given: #{$gap}";
+	}
+
+	$gap-y: list.nth($gap, 1);
+	$gap-x: $gap-y;
+
+	@if (list.length($gap) == 2) {
+		$gap-x: list.nth($gap, 2);
+	}
+
+	margin-right: $gap-x * -1;
+	margin-bottom: $gap-y * -1;
+
+	> * {
+		margin-right: $gap-x;
+		margin-bottom: $gap-y;
+	}
+}
+
+// For testing purposes only.
+// Maybe this functionality will be included in the future in some other form.
+@mixin flex-gap-margin-all($gap) {
+	$gap-halved: ();
+	@each $value in $gap {
+		$gap-halved: append($gap-halved, math.div($value, 2));
+	}
+	$gap: $gap-halved;
+
+	$gap-negative: ();
+	@each $value in $gap {
+		$gap-negative: append($gap-negative, -$value);
+	}
+	margin: $gap-negative;
+
+	> * {
+		margin: $gap;
+	}
+}
+
+// For testing purposes only.
+// Maybe this functionality will be included in the future in some other form.
+@mixin flex-gap-margin-top-left($gap) {
+	@if (list.length($gap) == 0) {
+		@error "`$gap` should be a list of 1 or 2 values. An empty value was given: #{$gap}";
+	}
+
+	$gap-y: list.nth($gap, 1);
+	$gap-x: $gap-y;
+
+	@if (list.length($gap) == 2) {
+		$gap-x: list.nth($gap, 2);
+	}
+
+	margin-top: $gap-y * -1;
+	margin-left: $gap-x * -1;
+
+	> * {
+		margin-top: $gap-y;
+		margin-left: $gap-x;
+	}
+}
